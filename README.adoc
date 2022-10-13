@@ -1,0 +1,54 @@
+:hardbreaks-option:
+
+= Internet Computer Bitcoin Library
+
+The library provides Bitcoin functionality built on top of the low-level Bitcoin integration API.
+The library provides the following functionality:
+
+* It can generate and manage Bitcoin addresses, supporting various address types.
+* Given a valid Bitcoin address, it can get the unspent transaction outputs (UTXOs) and the balance of it.
+* It can send bitcoins using UTXOs collected from managed addresses with various options to set the transaction fee.
+// * It can update unconfirmed Bitcoins transactions.
+* It can get current Bitcoin transaction fees.
+
+The library supports local deployments in Bitcoin regtest mode and in Bitcoin testnet mode when running on the Internet Computer.
+
+//* Motoko documentation is available xref:motoko/README.adoc[here].
+* Rust documentation is available https://docs.rs/ic-btc-library[here].
+
+== Disclaimer
+
+While the library is reasonably well tested, it is still under development, use it *at your own risk*.
+
+This work is in progress and is not production-grade yet in all its parts:
+
+* Canister upgradability and managing of state needs some more consideration before people should widely use it in production. If upgradeability is not perfect, we risk people's canisters to break on upgrade.
+* Some more test coverage would be nice in some parts.
+* We don't have much experience yet of using it.
+
+== Networks
+
+During your canister development, you might be interested in testing your canister with fake bitcoins. In order to do this, you can run a local Bitcoin blockchain in https://developer.bitcoin.org/examples/testing.html#regtest-mode[Regtest mode].
+For more details, see here:
+
+//* xref:motoko/docs/testing-locally.adoc[Motoko documentation].
+* https://docs.rs/ic-btc-library#4-testing-locally[Rust documentation].
+
+If you are more confident with your canister code, you can deploy it on the Internet Computer but continue to use fake Bitcoin by making use of the https://developer.bitcoin.org/examples/testing.html#testnet[Bitcoin testnet].
+If you want to put your canister into production using real bitcoins, you can then switch over to Bitcoin mainnet.
+
+== Release notes
+
+=== Features to come
+
+This first version only supports Rust, however support for Motoko will be added soon.
+
+*Update unconfirmed transactions using replace-by-fee.*
+
+Canisters will be able to update unconfirmed transactions using https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki[replace-by-fee] by issuing a new transaction with a higher transaction fee.
+
+*Furthermore two simple examples using the `ic-btc-library` will be provided.*
+
+1. The https://github.com/dfinity/bitcoin-developer-preview[bitcoin-developer-preview] which showcases how developers can use the library.
+
+2. The https://github.com/dfinity/examples/tree/bitcoin_wallet/rust/bitcoin_wallet[sample dApp] which is a Bitcoin wallet running fully on the Internet Computer.

@@ -1,0 +1,28 @@
+:hardbreaks-option:
+
+= Internet Computer Motoko Bitcoin Library
+
+== Testing
+
+Make sure that https://github.com/dfinity/vessel/releases[vessel] and https://github.com/bytecodealliance/wasmtime/releases[wasmtime] are installed.
+
+The library can be tested as follows:
+
+```
+# Pull this repository.
+git clone git@github.com:dfinity/bitcoin-library.git
+cd bitcoin-library/motoko/
+
+# Pull dependencies recursively.
+git submodule update --init --recursive
+
+# Remove asynchronicity because it isn't supported.
+mkdir not-async/
+cp -r . not-async/
+cd not-async/
+find . -type f -name '*.mo' -exec sed -i s/:\ async\ /:\ /g {} +
+find . -type f -name '*.mo' -exec sed -i s/await\ //g {} +
+
+# Follow the instructions in `src/UtxoManagement.mo:get_utxos` and `src/TransactionManagement.mo:get_current_fees` to make the tests compilable.
+make test
+```
