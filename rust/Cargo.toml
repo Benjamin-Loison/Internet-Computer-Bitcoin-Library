@@ -15,7 +15,7 @@ hmac = "0.12"
 sha2 = "0.10"
 k256 = { version = "0.11", default-features = false, features = ["arithmetic"] }
 candid = "0.7.14"
-ic-btc-types = { git = "https://github.com/dfinity/ic/" }
+ic-btc-types = { git = "https://github.com/dfinity/ic/", rev = "ee7a4aaf03bf355d7dd572ddc791a8d4c85fbd5e" }
 
 [dev-dependencies]
 hex = "0.4.3"

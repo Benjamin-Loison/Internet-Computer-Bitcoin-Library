@@ -18,10 +18,12 @@ cd Internet-Computer-Bitcoin-Library/rust/
 cargo build
 ```
 
+Follow the instructions at the bottom of `src/lib.rs` to make the tests compilable.
+
 You can run tests with:
 
 ```
-cargo test --tests
+cargo test
 ```
 
 Please refer to the https://doc.rust-lang.org/stable/cargo/[`cargo` documentation] for more detailed instructions.
