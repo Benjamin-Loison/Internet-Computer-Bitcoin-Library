@@ -1,0 +1,3 @@
+[submodule "motoko/motoko-bitcoin"]
+	path = motoko/motoko-bitcoin
+	url = https://github.com/tgalal/motoko-bitcoin
