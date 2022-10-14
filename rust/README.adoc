@@ -13,8 +13,8 @@ Make sure that https://www.rust-lang.org/tools/install[Rust] is installed.
 The library can be built and tested using `cargo`:
 
 ```
-git clone git@github.com:dfinity/bitcoin-library.git
-cd bitcoin-library/rust/
+git clone git@github.com:Benjamin-Loison/Internet-Computer-Bitcoin-Library.git
+cd Internet-Computer-Bitcoin-Library/rust/
 cargo build
 ```
 

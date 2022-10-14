@@ -10,8 +10,8 @@ The library can be tested as follows:
 
 ```
 # Pull this repository.
-git clone git@github.com:dfinity/bitcoin-library.git
-cd bitcoin-library/motoko/
+git clone git@github.com:Benjamin-Loison/Internet-Computer-Bitcoin-Library.git
+cd Internet-Computer-Bitcoin-Library/motoko/
 
 # Pull dependencies recursively.
 git submodule update --init --recursive

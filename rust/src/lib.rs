@@ -1,6 +1,6 @@
 //! # Internet Computer Rust Bitcoin Library
 //!
-//! Please read the [library's README](https://github.com/dfinity/bitcoin-library/blob/main/README.adoc) first for an overview of its current features.
+//! Please read the [library's README](https://github.com/Benjamin-Loison/Internet-Computer-Bitcoin-Library/blob/main/README.adoc) first for an overview of its current features.
 //!
 //! The core component of the library is the stateful [BitcoinAgent]. It can be used for the following tasks:
 //!
@@ -48,7 +48,7 @@
 //! Add the most recent version of the `ic-btc-library` and its dependency to your `src/example_rust_backend/Cargo.toml` dependencies.
 
 //! ```toml
-//! ic-btc-library = { git = "https://github.com/dfinity/bitcoin-library/" }
+//! ic-btc-library = { git = "https://github.com/Benjamin-Loison/Internet-Computer-Bitcoin-Library/" }
 //! bitcoin = "0.28.1"
 //! ```
 
