@@ -21,13 +21,14 @@
 
 //! # 0. Disclaimer
 
-//! While the library is reasonably well tested, it is still under development, use it *at your own risk*.
+
+//! While the library is reasonably well tested, it is still under development, therefore use it *at your own risk*.
 //!
-//! This work is in progress and is not production-grade yet in all its parts:
+//! This library is *work in progress* and is *not production-grade* yet. At least the following aspects of the library need further consideration before using it in production use cases:
 //!
-//! * Canister upgradability and managing of state needs some more consideration before people should widely use it in production. If upgradeability is not perfect, we risk people's canisters to break on upgrade.
-//! * Some more test coverage would be nice in some parts.
-//! * We don't have much experience yet of using it.
+//! * Canister upgradability and management of state related to the library requires further consideration before the library can be used in production. If upgradeability of a canister w.r.t. the replicated state managed by the library is flawed, we risk canisters to break on an upgrade in production, in the worst case in a non-recoverable or hard-to-recover fashion.
+//! * More test coverage would be important for some parts of the code.
+//! * We have not gained much experience yet in using the library in real-world use cases.
 
 //! # 1. Step-by-step tutorial
 
